@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Document</title>
+  <sytle>
+    button{
+    text-transform: capitalize;
+    }
+  </sytle>
+</head>
+
+<body>
+  <button onclick="callAllEvents('Click Event')">clickEvent</button>
+  <button onclick="callAllEvents('Double Click Event')">Double click Event</button>
+  <button onclick="callAllEvents('Right Click Event')">Right click Event</button>
+  <button onclick="callAllEvents('Mouse Click Event')">Mouse click Event</button>
+  <button onclick="callAllEvents('Mouse Leave Event')">mouse click Event</button>
+
+  <i-- <input type="text" onkeydown="callAllEvents('key Down Event')" name="" id=""> -->
+
+    <input type="text" onkeyup="callAllEvents(value)" name="" id="">
+    <script>
+      function callAllEvents(eventMesage) {
+        console.log(eventMesage)
+      }
+    </script>
+</body>
+
+</html>
