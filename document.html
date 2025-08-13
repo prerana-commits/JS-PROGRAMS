@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>Hello JavaScript</title>
+  <meta name="viewport" content="width=device-width , initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-  <h1 id="demo">Hello from HTML</h1>
+  <!-- <h1>https://www.facebook.com/</h1>
+         <h2>Facebook</h2>
+         <a href=""></a>
+    -->
+
+  <h2 id="https://www.facebook.com/">Facebook</h2>
+  <a href=""></a>
+
+  <!-- 
+       Todays Task
+       h1 -> (get innerText from h1 and set into anchor)
+       a (set bootstrap link into anchor)
+       h1 -> img (get innerText from h1 and set into img src)
+       img.height -> img.width (get height from img and set into img width)
+       p -> texxtarea (get innerText from p and set into textarea)
+       img.src -> p.innertext (get img src and set paragraph innertext)
+    -->
+
+  <input>
+
+  <img src="https://i.pinimg.com/736x/fd/bb/56/fdbb56d518b5ef307845058e8d61949c.jpg" width="200" alt="">
+
   <script>
-    console.log("Hello from JavaScript (check the console)!");
-    document.getElementById("demo").innerText = "Hello from JavaScript in the page!";
+    let h2Tag = document.getElementsByTagName('h2')[0] // get
+    let anchorTag = document.getElementsByTagName('a')[0]
+    anchorTag.innerText = h2Tag.innerText // set
+    anchorTag.href = h2Tag.id
+
+    // let anchorUrl = document.getElementbyTagName('h1')[0].innertext
+    // let anchorInnerText = document.getElementByTagName('h2')[0].innerText
+    // let anchorTag document.getElementByTagName('a')[0]
+    // anchorTag.href = anchorUrl
+    // anchorTag.innerText = anchorInnerText
+
+    let imgUrl = document.getElementsByTagName('img')[0].src
+    document.getElementsByTagName('P')[0].innerText = imhUrl
+
+    // document.getElementByTagName('input')[0].type = 'password'
+    // document.getElementByTagName('input')[0].placeholder = 'Enter password'
   </script>
-  
 </body>
 
 </html>
