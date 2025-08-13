@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Hii i'am javascript</h1>
+  <i></i><br>
+  <button onclick="setInnerTextToItalic()">Set innerText</button>
+
+  <!-- new example -->
+
+  <input type="text" placeholder="Enter Image Uel" id=""><br>
+  <button onclick="ShowImage()">Show Image</button><br>
+  <img src="" alt="" width="200" height="200">
+
+  <!-- <textarea name="" id=""></textarea> -->
+
+  <input type="text" placeholder="Enter Anchor Href" id=""><br>
+  <input type="text" placeholder="Enter Anchor innertext" id=""><br>
+  <button onclick="createAnchor()">Create Anchor Tag</button>
+  <a href=""></a>
+  <script>
+    function setInnerTextToItalic() {
+      let h1Tag = document.getElementsByTagName('h1')[0]
+      document.getElementsByTagName('i')[0].innerText = h1Tag.innerText
+      console.log('hiii')
+    }
+
+    // setInnerTextToItalic()
+
+    function ShowImage() {
+      let imgUrl = document.getElementsByTagName('input')[0].value
+      document.getElementsByTagName('img')[0].src = imgUrl
+    }
+    function createAnchor() {
+      let anchorLink = document.getElementsByTagName('input')[1].value
+      let anchorInnerText = document.getElementsByTagName('input')[2].value
+
+      let anchorTag = document.getElementsByTagName('a')[0]
+      anchorTag.href = anchorLink
+      anchorTag.innerText = anchorInnerText
+    }
+  </script>
+</body>
+
+</html>
