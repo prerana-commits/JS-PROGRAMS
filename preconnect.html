@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta charset="viewport" content="width=device-width , initial-scale=1.0">
+  <title>Document</title>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gststic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+script:wght@400..700&family=getElementByTagName
+                blema+one&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,700;1,900&family=Maco
+                ndo&family=Mukta:wght@200;300;400;500;600;700;800&family=Oswald:wght@200..700&family=Oxanium:wght
+                @200..800&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+VN:wght@100..400&family=Poppins:i
+                tal,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,60
+                0;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Spinnaker&fami
+                ly=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <style>
+    /* 
+       section {
+       text-decoration: line-through;
+      } 
+      */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: fangsong;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    textarea {
+      width: 400px;
+      height: 150px;
+      padding: 10px;
+      font-size: 1.5rem;
+      border: 1px solid gray;
+      border-radius: 10px;
+    }
+
+    .box {
+      text-align: center;
+    }
+
+    button,
+    select {
+      margin: 5px;
+      padding: 5px 10px;
+      border-radius: 7px;
+      border-radius: 10px;
+    }
+
+    input {
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <secton>
+    <div class="mainBox">
+      <div class="box">
+        <textarea name="" id=""></textarea>
+        <div class="btns">
+          <select onchange="changeFontFamily(value)">
+            <option selected disabled>-- select Font Family --</option>
+            <option value="Dancing script">Dancing script</option>
+            <option value="Mukta"></option>
+            <option value="Oxanium"></option>
+            <option value="Poppins"></option>
+            <option value="Spinnaker"></option>
+            <option value="Playwrite VN"></option>
+            <option value="Lato"></option>
+            <option value="Macondo"></option>
+            <option value="Playwrite AU SA"></option>
+          </select><br>
+          <input type="text" placeholder="Button name">
+          <button onclick="createButton()">create Button</button>
+          <div class="color-btns">
+            <button onclick="setcolorontext(innertext)">Red</button>
+            <button onclick="setcolorontext(innertext)">Green</button>
+            <button onclick="setcolorontext(innertext)">Yellow</button>
+          </div>
+          <button onclick="setlineontext(innertext)">underline</button>
+          <button onclick="setlineontext(innertext)">overline</button>
+          <button onclick="setcolorontext('line-through')">line through</button>
+          <br>
+          <input type="text" placeholder="find word">
+          <input type="text" placeholder="Replace word">
+          <button onclick="replaceword()">Replace</button>
+        </div>
+      </div>
+    </div>
+  </secton>
+  <script>
+    function setcolorontext(colorname) {
+      document.getElementsByTagName('textarea')['0'].style.color = colorname
+    }
+    function setlineontext(linename) {
+      document.getElementsByTagName('textarea')['0'].style.textDecoration = linename
+    }
+    function replaceword() {
+      let textareaword = document.getElementsByTagName('textarea')[0].value
+      let findword = document.getElementsByTagName('input')[1].value
+      let replaceword = document.getElementsByTagName('input')[2].value
+      let changeword = textareaword.replace(findword, replaceword)
+      document.getElementsByTagName('textarea')[0].value = changeword
+    }
+    function changeFontFamily(fontfamilyname) {
+      // console.log(fontfamilyname)
+      document.getElementsByTagName('textarea')[0].style.fontFamily = fontfamilyname
+    }
+    function createButton() {
+      let btnname = document.getElementsByTagName('input')[0].value
+      document.getElementsByTagName('div')[3].innerHTML +=
+        <button onclick="setcolorontext(innertext)">$(btnName)</button>
+    }
+  </script>
+</body>
+
+</html>

@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="">
-    <title>Document</title>
-    <style>
-      h1{
-        text-align: center;
-        text-decoration-line: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Heading 1</h1>
-    <img src="https://wallpapers.com/images/hd/pinterest-pictures-odvm366yw5t5m4wo.jpg" alt="">
-    <script>
-      // document.getElementsByTagName('h1')[]
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="">
+  <title>Document</title>
+  <style>
+    h1 {
+      text-align: center;
+      text-decoration-line: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Heading 1</h1>
+  <img src="https://wallpapers.com/images/hd/pinterest-pictures-odvm366yw5t5m4wo.jpg" alt="">
+  <img src="https://i.pinimg.com/originals/fd/bb/56/fdbb56d518b5ef307845058e8d61949c.jpg" alt="">
+  <script>
+    // document.getElementsByTagName('h1')[0].innerText=""
+    let h1Tag = document.getElementsByTagName('h1')[0]
+    h1Tag.style.backgroundColor = "greenyellow"
+    h1Tag.style.textalign = 'center'
+    h1Tag.style.textDecorationLine = 'underline'
+
+    let imgTag = document.getElementsByTagName('img')[0]
+    imgTag.style.width = '50px'
+    imgTag.style.height = '50px'
+    imgTag.style.borderRadius = '50%'
+  </script>
+</body>
+
 </html>
